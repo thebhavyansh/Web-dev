@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         .myclass{
-            background-color: blue;
+            background-color: yellow;
         }
     </style>
 </head>
@@ -20,14 +20,14 @@
     </main>
     <article >
       
-        <h1 id="rem">Hello welcome to this world of idiots</h1>
+        <h1 id="demo">Hello welcome to this world of idiots</h1>
     </article>
 
     <script>
         Changeme = function(){
             var myMain = document.querySelector('h1');
             myMain.style.color = "blue";
-            document.body.className = "myclass";
+            myMain.className = "myclass";
             document.getElementById("demo").style.color = "red";
 
         }
