@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+      }
+      .form-control {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+        padding: 10px;
+        margin: 10px 0;
+        text-align: center;
+      }
+      .btn {
+        width: 50px;
+        height: 40px;
+        font-size: 20px;
+        margin: 10px;
+      }
+      .result {
+        font-size: 30px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="input1" class="form-control" />
+      <input type="text" id="input2" class="form-control" />
+      <button class="btn" onclick="calculate('+')">+</button>
+      <button class="btn" onclick="calculate('-')">-</button>
+      <button class="btn" onclick="calculate('*')">*</button>
+      <button class="btn" onclick="calculate('/')">/</button>
+    </div>
+    <div class="result" id="result"></div>
+    <script>
+      function calculate(operator) {
+        var input1 = Number.parseInt(document.getElementById("input1").value);
+        var input2 = Number.parseInt(document.getElementById("input2").value);
+        var result;
+        switch (operator) {
+          case "+":
+            result = input1 + input2;
+            break;
+          case "-":
+            result = input1 - input2;
+            break;
+          case "*":
+            result = input1 * input2;
+            break;
+          case "/":
+            result = input1 / input2;
+            break;
+          default:
+            result = "Invalid Operation";
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

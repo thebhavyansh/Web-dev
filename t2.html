@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #count {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="incrementBtn">Increment</button>
+    <p id="count">0</p>
+    <script>
+      const incrementBtn = document.getElementById("incrementBtn");
+      const count = document.getElementById("count");
+      let countValue = 0;
+      
+      incrementBtn.addEventListener("click", function() {
+        countValue++;
+        count.innerHTML = countValue;
+        count.style.fontSize = countValue * 10 + 20 + "px";
+      });
+    </script>
+  </body>
+</html>

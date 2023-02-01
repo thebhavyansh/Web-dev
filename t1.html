@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #hello {
+        animation: spin 5s linear 2;
+      }
+      
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="hello">Hello</h2>
+    <input type="text" id="inputBox">
+    <button id="submitBtn">Submit</button>
+    <script>
+      const inputBox = document.getElementById("inputBox");
+      const submitBtn = document.getElementById("submitBtn");
+      const hello = document.getElementById("hello");
+      
+      submitBtn.addEventListener("click", function() {
+        hello.innerHTML = inputBox.value;
+      });
+    </script>
+  </body>
+</html>
